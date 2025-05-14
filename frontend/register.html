@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <!-- Tailwind CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- AOS CSS CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      /* Main Content */
+      .register-form {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        width: 100%;
+        max-width: 400px;
+        margin: 2rem auto;
+      }
+      .register-form h2 {
+        font-family: "Playfair Display", serif;
+        color: #ffd700;
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .register-form label {
+        color: #ffffff;
+        font-weight: 500;
+      }
+      .register-form input {
+        background: rgba(255, 255, 255, 0.2);
+        border: none;
+        color: #ffffff;
+        padding: 0.75rem;
+        border-radius: 5px;
+        width: 100%;
+        margin: 0.5rem 0 1rem;
+      }
+      .register-form input:focus {
+        outline: none;
+        background: rgba(255, 255, 255, 0.3);
+      }
+      .register-form button {
+        background: #ffd700;
+        color: #1a1a1a;
+        padding: 0.75rem;
+        border-radius: 50px;
+        width: 100%;
+        font-weight: 500;
+        transition: transform 0.3s ease, background 0.3s ease;
+      }
+      .register-form button:hover {
+        background: #d4af37;
+        transform: scale(1.05);
+      }
+      .register-form p {
+        text-align: center;
+        margin-top: 1rem;
+      }
+      @media (max-width: 768px) {
+        .register-form {
+          margin: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main Content -->
+    <main>
+      <div class="register-form" data-aos="fade-up">
+        <h2>Create Your Account</h2>
+        <form id="registerForm">
+          <label for="username">Username:</label>
+          <input type="text" id="username" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" required />
+          <label for="password">Password:</label>
+          <input type="password" id="password" required />
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" required />
+          <button type="submit">Register</button>
+        </form>
+        <p id="registerMessage"></p>
+      </div>
+    </main>
+
+    <!-- AOS JS CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
+    <!-- Load Header and Footer -->
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

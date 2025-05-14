@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses</title>
+    <!-- Tailwind CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- AOS CSS CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      h2 {
+        font-family: "Playfair Display", serif;
+        color: #ffd700;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      /* Main Content */
+      #courseList {
+        max-width: 1200px;
+        margin: 80px auto 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 2rem;
+      }
+      .course-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: 1.5rem;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .course-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+      }
+      .course-card h3 {
+        font-family: "Playfair Display", serif;
+        color: #ffd700;
+        margin-bottom: 1rem;
+      }
+      .course-card p {
+        color: #cccccc;
+        margin-bottom: 1.5rem;
+      }
+      .course-card a {
+        background: #ffd700;
+        color: #1a1a1a;
+        padding: 0.75rem 1.5rem;
+        border-radius: 50px;
+        font-weight: 500;
+        transition: background 0.3s ease;
+      }
+      .course-card a:hover {
+        background: #d4af37;
+      }
+      @media (max-width: 768px) {
+        #courseList {
+          margin: 60px auto 1rem;
+          padding: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main Content -->
+    <main>
+      <h2 data-aos="fade-up">Explore Our Courses</h2>
+      <div id="courseList" data-aos="fade-up" data-aos-delay="200"></div>
+    </main>
+
+    <!-- AOS JS CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
+    <!-- Load Header and Footer -->
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

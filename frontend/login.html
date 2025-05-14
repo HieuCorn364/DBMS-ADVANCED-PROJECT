@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <!-- Tailwind CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- AOS CSS CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      /* Main Content */
+      .login-form {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        width: 100%;
+        max-width: 400px;
+        margin: 2rem auto;
+      }
+      .login-form h2 {
+        font-family: "Playfair Display", serif;
+        color: #ffd700;
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .login-form label {
+        color: #ffffff;
+        font-weight: 500;
+      }
+      .login-form input {
+        background: rgba(255, 255, 255, 0.2);
+        border: none;
+        color: #ffffff;
+        padding: 0.75rem;
+        border-radius: 5px;
+        width: 100%;
+        margin: 0.5rem 0 1rem;
+      }
+      .login-form input:focus {
+        outline: none;
+        background: rgba(255, 255, 255, 0.3);
+      }
+      .login-form button {
+        background: #ffd700;
+        color: #1a1a1a;
+        padding: 0.75rem;
+        border-radius: 50px;
+        width: 100%;
+        font-weight: 500;
+        transition: transform 0.3s ease, background 0.3s ease;
+      }
+      .login-form button:hover {
+        background: #d4af37;
+        transform: scale(1.05);
+      }
+      .login-form p {
+        text-align: center;
+        margin-top: 1rem;
+      }
+      @media (max-width: 768px) {
+        .login-form {
+          margin: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main Content -->
+    <main>
+      <div class="login-form" data-aos="fade-up">
+        <h2>Login to Your Account</h2>
+        <form id="loginForm">
+          <label for="email">Email:</label>
+          <input type="email" id="email" required />
+          <label for="password">Password:</label>
+          <input type="password" id="password" required />
+          <button type="submit">Login</button>
+        </form>
+        <p id="loginMessage"></p>
+      </div>
+    </main>
+
+    <!-- AOS JS CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
+    <!-- Load Header and Footer -->
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

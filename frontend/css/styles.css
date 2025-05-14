@@ -1,0 +1,154 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1a1a1a 0%, #4b4b4b 100%);
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+  padding-top: 80px; /* Đảm bảo nội dung không bị che bởi header */
+}
+
+h1,
+h2 {
+  font-family: "Playfair Display", serif;
+}
+
+/* Header Styles */
+header {
+  background: #1a1a1a;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  height: 60px; /* Chiều cao cố định */
+}
+
+header .logo {
+  font-family: "Playfair Display", serif;
+  color: #ffd700;
+  font-size: 1.5rem; /* Giảm kích thước logo */
+  font-weight: 700;
+}
+
+header nav a {
+  color: #ffffff;
+  margin: 0 1rem; /* Giảm khoảng cách giữa các link */
+  font-size: 1rem; /* Giảm kích thước chữ */
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #ffd700;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  display: block;
+  width: 20px; /* Giảm kích thước menu icon */
+  height: 2px;
+  background: #ffd700;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #1a1a1a;
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+  .menu.active {
+    display: flex;
+  }
+  .menu a {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+  .menu-icon.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .menu-icon.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-icon.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+/* Footer Styles */
+footer {
+  background: linear-gradient(135deg, #1a1a1a 0%, #4b4b4b 100%);
+  padding: 1.5rem 0; /* Giảm padding để footer nhỏ hơn */
+  text-align: center;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+footer .logo {
+  font-family: "Playfair Display", serif;
+  color: #ffd700;
+  font-size: 1.5rem; /* Giảm kích thước logo */
+  margin-bottom: 0.5rem; /* Giảm khoảng cách */
+}
+
+footer .slogan {
+  color: #cccccc;
+  font-size: 0.9rem; /* Giảm kích thước chữ */
+  margin-bottom: 1rem; /* Giảm khoảng cách */
+}
+
+footer .footer-links,
+footer .footer-contact {
+  margin: 0.5rem 0; /* Giảm khoảng cách */
+}
+
+footer a,
+footer p {
+  color: #ffffff;
+  margin: 0 0.75rem; /* Giảm khoảng cách giữa các link */
+  font-size: 0.9rem; /* Giảm kích thước chữ */
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffd700;
+}
+
+footer .copyright {
+  color: #cccccc;
+  font-size: 0.8rem; /* Giảm kích thước chữ */
+  margin-top: 1rem; /* Giảm khoảng cách */
+}
+
+@media (max-width: 768px) {
+  footer .footer-links,
+  footer .footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem; /* Giảm khoảng cách trên mobile */
+  }
+}
